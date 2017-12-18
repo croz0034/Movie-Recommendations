@@ -1,0 +1,192 @@
+@import "https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin+Slab";
+/***********************************
+Defaults
+*****************************/
+/*
+    font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+    font-family: "Josefin Slab", "Times New Roman", Times, serif;
+*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+    border-radius: 1rem;
+    overflow-x: hidden;
+}
+html{
+    font-size: 20px;
+    line-height: 1.5;
+    background-color: #081c24;
+    background-image: url(../IMG/powered-by-square-green.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+/**************************************
+layout
+*******************************/
+.page{
+/*    display:none;*/
+    padding: 1rem;
+    margin: 3rem;
+}
+
+.page.active{
+    display:block;
+}
+.not{
+    display:none;
+}
+.attribution{
+    padding: 1rem;
+    text-align: center;
+}
+
+/***********************************
+search bar
+*******************************/
+.search{
+    position: fixed;
+    height: 3rem;
+    top: 0;
+    left: 0;
+    right:0;
+    border-radius: 0;
+    border-bottom: 1px solid #333;
+    z-index: 100;
+    box-shadow: 0 4px 6px #01d277;
+}
+
+#search-button {
+    position: absolute;
+    border: 0.25rem outset #eee;
+    border-radius: 0;
+    top: 0;
+    right: 0;
+    width: 3rem;
+    height: 3rem;
+    background-color: #dedede;
+    z-index: 120;
+    cursor: pointer;
+}
+#search-input{
+    background-color: #dedede;
+    position: absolute;
+    padding-left: 1rem;
+    top: 0;
+    left: 0;
+    height: 3rem;
+    width: 100%;
+    z-index: 110;
+    font-size: 1.8rem;
+    border-radius: 0;
+}
+/***********************************
+bottom banner
+*******************************/
+#bottom-banner{
+    position: fixed;
+    height: 3rem;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #333;
+    z-index: 100;
+    box-shadow: 0 -4px 6px #01d277;
+    background-color: #dedede;
+    border-radius: 0;
+}
+#back{
+    cursor: pointer;
+    text-align: center;
+    background-color: #dedede;
+    padding-top: 0.5rem;
+    width: 50%;
+    height: 100%;
+    display: inline;
+    border: 0.25rem outset #eee;
+    border-radius: 0;
+    float: left;
+    display: inline;
+}
+#results{
+    text-align: center;
+    background-color: #dedede;
+    padding-top:0.75rem;
+    width: 50%;
+    height: 100%;
+    float: left;
+    display: inline;
+    border-radius: 0;
+}
+/***********************************
+results
+*******************************/
+
+.movie{
+    cursor: pointer;
+    border: 0.25rem outset #eee;
+    padding: 1rem;
+    overflow: auto;
+    clear: both;
+    margin: 0.5rem;
+    border-radius: 1rem;
+    transition: transform 1s ease-in-out;
+    background-color: #dedede;
+    box-shadow: 4px 4px 8px #01d277;
+}
+p, h2 {
+    background-color: #dedede;
+}
+.movie.move{
+    display:block;
+    transition: transform 1s ease-in-out;
+}
+
+.poster{
+    float: left;
+    background-color: #ddd;
+    width:150px;
+    height: auto;
+    min-height: 150px;
+    margin: 0 1rem 1rem 0;
+}
+h2{
+    font-family: "Josefin Slab", "Times New Roman", Times, serif;
+    font-size: 2rem;
+}
+.movie-desc{
+    font-size: 1rem;
+    color: #888;
+}
+/*
+#search-results.movie{
+}
+#search-results.active.active.movie{
+}
+*/
+.released{
+    font-size: 0.8rem;
+    text-align: right;
+    color: #aaa;
+    padding-right: 2rem;
+}
+
+/***********************************
+Misc
+*******************************/
+#recommend-results.hidden{
+        transition: transform 1s ease-in-out;
+        transform: translateX(400%);
+        position: absolute;
+}
+#search-results.hidden {
+        transition: transform 1s ease-in-out;
+        transform: translateX(-400%);
+        position: absolute;
+}
+#search-results, #recommend-results{
+        position:absolute;
+        transition: transform 1s ease-in-out;
+        transform: translateX(0%);
+}
