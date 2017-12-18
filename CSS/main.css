@@ -47,6 +47,7 @@ layout
 search bar
 *******************************/
 .search{
+    overflow-y: hidden;
     position: fixed;
     height: 3rem;
     top: 0;
@@ -59,7 +60,6 @@ search bar
 }
 
 #search-button {
-    overflow-y: hidden;
     position: absolute;
     border: 0.25rem outset #eee;
     border-radius: 0;
