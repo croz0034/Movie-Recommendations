@@ -59,6 +59,7 @@ search bar
 }
 
 #search-button {
+    overflow-y: hidden;
     position: absolute;
     border: 0.25rem outset #eee;
     border-radius: 0;
